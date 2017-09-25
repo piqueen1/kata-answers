@@ -10,7 +10,7 @@ function countSmileys(arr) {
     D. if it passes all tests, increment smiley counter ++ */
   
   //declare counter and qualifying values for smiley parts
-  const counter = 0;
+  let counter = 0;
   const goodEyes = /[:;]/;
   const goodNoseMouth = /[-~)D]/;
   const goodMouth = /[)D]/;
@@ -19,7 +19,7 @@ function countSmileys(arr) {
   const strings = arr.toString().split(',');
   
   //if array is empty return 0
-  if(arr.length === 0) {
+  if(!arr) {
     return 0;
   };
   
@@ -27,13 +27,16 @@ function countSmileys(arr) {
   for (let i = 0; i < strings.length; i++) {
     const string = strings[i];
     const characters = string.split('');
+    let character = characters[i];
  
   //check each sub array and increment counter if it qualifies
-    if(characters[0] === goodEyes
-       && characters[1] === goodNoseMouth
-       && characters[2] === goodMouth || characters[2].length === 0) {
+    if(character.match(goodEyes)
+       && character.match(goodNoseMouth)
+       && characters.match(goodMouth) || !characters[2]) {
       counter++;
     };
   };
   return counter;  
 }
+
+countSmileys([':)', ';(', ';}', ':-D']);
