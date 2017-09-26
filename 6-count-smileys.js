@@ -1,5 +1,5 @@
 //return the total number of smiling faces in the array
-function countSmileys(arr) {
+function countSmileys(faces) {
   /*A. if it's an empty array, return 0
     B. break array into strings
     C. for each string, 
@@ -12,31 +12,57 @@ function countSmileys(arr) {
   //declare counter and qualifying values for smiley parts
   let counter = 0;
   const goodEyes = /[:;]/;
-  const goodNoseMouth = /[-~)D]/;
+  const goodNose = /[-~]/;
   const goodMouth = /[)D]/;
-  
-  //break array into strings
-  const strings = arr.toString().split(',');
-  
+    
   //if array is empty return 0
-  if(!arr) {
+  if(!faces){
     return 0;
-  };
+  }
+  
+  if (faces.length <= 0) {
+    return 0;
+  }
   
   //go into each string and divide it into an array
-  for (let i = 0; i < strings.length; i++) {
-    const string = strings[i];
-    const characters = string.split('');
-    let character = characters[i];
- 
-  //check each sub array and increment counter if it qualifies
-    if(character.match(goodEyes)
-       && character.match(goodNoseMouth)
-       && characters.match(goodMouth) || !characters[2]) {
-      counter++;
-    };
-  };
+  for (let i = 0; i < faces.length; i++) {
+    const face = faces[i];
+    const characters = face.split('');
+    const eyes = characters[0];
+
+
+  //check each face with 3 characters    
+    if (characters.length > 3) {
+      continue;
+    }
+
+    if (characters.length === 3) {
+      const nose = characters[1];
+      const mouth = characters[2];
+      if (!eyes.match(goodEyes)) {
+        continue;
+      }
+      if (!nose.match(goodNose)) {
+        continue;
+      }
+      if (!mouth.match(goodMouth)) {
+        continue;    
+      }
+    }
+    //check if there are only 2 characters    
+    if (characters.length === 2) {
+      const mouth = characters[1];
+      if (!eyes.match(goodEyes)) {
+        continue;
+      }
+      if (!mouth.match(goodMouth)) {
+        continue;    
+      }
+    } 
+    counter++
+  }
   return counter;  
 }
 
-countSmileys([':)', ';(', ';}', ':-D']);
+console.log(countSmileys([':)', ';(', ';}', ':-D']));
+
