@@ -17,10 +17,7 @@ function isValid(numbers) {
     return false;
   }
 
-  if (isThere(7) && !isThere(8)) {
-    return false;
-  }
-  if (isThere(8) && !isThere(7)) {
+  if (!isThere(7) && !isThere(8)) {
     return false;
   }
 
