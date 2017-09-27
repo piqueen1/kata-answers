@@ -1,5 +1,4 @@
 function solve(a){
-console.log(a);
   /*
   1) count even numbers (ignore letters)
   2) count odd numbers (ignore letters)
@@ -11,13 +10,17 @@ console.log(a);
 
   for ( let i = 0; i < numbers.length; i++) {
   	const number = numbers[i];
-
+    
+    if (typeof number !== 'number') {
+      continue;
+    }
+    
   	if (number % 2 === 0 || number === 0) {
   		evenCounter++;
-  	} else if (typeOf number === 'number') {
+  	} else {
   		oddCounter++;
   	}
   }
-return evenCounter - oddCounter;
+	return evenCounter - oddCounter;
 
 };
