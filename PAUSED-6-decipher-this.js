@@ -30,25 +30,38 @@ function decipherThis(str) {
   for (let i = 0; i < words.length; i++){
   //split word into characters
     const word = words[i];
-    const character = word.split('');
+    const characters = word.split('');
 		let numberArray = [];
     let gluedNumber = 0;
     let letterFromUnicode = '';
-    let translatedArray = [];
-    
-    //if character is a number, push to number array
-    if (!Number.isNaN(character){
-    	numberArray.push(character);
-    };
-  	//glue numberArray into number
-  	gluedNumber = numberArray.join();
-  	//change number into letter
-  	letterFromUnicode = String.fromCharCode(gluedNumber);
-		//put that letter into 'translated' array
-  	translatedArray.push(letterFromUnicode);
-  	//if it's a number, delete that character from word array
-		//I'm trying to get it down to just letters  
-  
+    let translatedWordsArray = [];
+
+    //if only one letter, push to translated word array
+    if (word.length === 1) {
+      translatedWordsArray.push(word);
+    }
+
+    for (let j = 0; j < word.length; j++) {
+      //if character is a number, push to number array
+      if (typeof character === 'number') {
+      	numberArray.push(character);
+
+      //delete it from the single word array
+        word.shift();
+      };
+
+    	//glue numberArray into number
+    	gluedNumber = numberArray.join();
+    	//change number into letter
+    	letterFromUnicode = String.fromCharCode(gluedNumber);
+  		//put that letter back at the start of the single word array
+    	word.unshift(letterFromUnicode);
+      
+      //switch 2nd letter with last letter
+      //but this replaces the second letter before we put it at the end
+      characters[1] === characters[characters.length-1];
+
+    }
 };
   
   return translatedArray;

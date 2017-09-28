@@ -20,7 +20,7 @@ function titleCase(title, minorWords) {
   */
 	const lowerTitle = title.toLowerCase();
 	const titleWords = lowerTitle.split('');
-	const lowerExceptions = minorwords.toLowerCase();
+	const lowerExceptions = minorWords.toLowerCase();
 	const exceptionWords = lowerExceptions.split('');
 	let finalTitleArray = [];
 	let finalTitle = '';
@@ -33,7 +33,7 @@ function titleCase(title, minorWords) {
 		let finalWord = '';
 
 		//for first word and other non-exceptions
-		for (titleWords[0] || !exceptionWords.includes(titleWord)) {		
+		if (titleWords[0] || !exceptionWords.includes(titleWord)) {		
 			//for every letter
 			for (let j = 0; j < letters.length; j++)
 
