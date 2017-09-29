@@ -11,7 +11,7 @@
 	kata: https://www.codewars.com/kata/wilson-primes/train/javascript
 
 3.  MAYBE EASY MAYBE NOT
-	file: 8-training-js-31.js
+	file: 8-js-basic-31.js
 	issue: misclassifies things as white or black
 	guess: no clue
 	kata: https://www.codewars.com/kata/training-js-number-31-methods-of-arrayobject-isarray-indexof-and-tostring/train/javascript
