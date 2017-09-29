@@ -1,0 +1,18 @@
+1.  EASY
+	file: 8-sum-without-highest.js
+	issue: returns undefined (can't figure out why)
+	guess: line 7 is wrong
+	kata: https://www.codewars.com/kata/sum-without-highest-and-lowest-number/train/javascript
+
+2. 	EASY
+	file: 8-wilson-primes.js
+	issue: always returns true
+	guess: something is screwy with the math?  looks right
+	kata: https://www.codewars.com/kata/wilson-primes/train/javascript
+
+3.  MAYBE EASY MAYBE NOT
+	file: 8-training-js-31.js
+	issue: misclassifies things as white or black
+	guess: no clue
+	kata: https://www.codewars.com/kata/training-js-number-31-methods-of-arrayobject-isarray-indexof-and-tostring/train/javascript
+	Notes: passed 55 / failed 48; can't find error pattern
