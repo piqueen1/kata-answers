@@ -18,10 +18,10 @@ function titleCase(title, minorWords) {
 			6. rejoin and push to final array
 		d. return final array
   */
+
 	const lowerTitle = title.toLowerCase();
 	const titleWords = lowerTitle.split('');
-	const lowerExceptions = minorWords.toLowerCase();
-	const exceptionWords = lowerExceptions.split('');
+
 	let finalTitleArray = [];
 	let finalTitle = '';
 
@@ -32,20 +32,28 @@ function titleCase(title, minorWords) {
 		let finalLetterArray = [];
 		let finalWord = '';
 
+		//if minorWords is undefined (no 2nd arg)
+		if (minorWords === undefined) {
+			finalTitleArray.push(titleWord);
+		}
+		//format minorWord array
+		const lowerExceptions = minorWords.toLowerCase();
+		const exceptionWords = lowerExceptions.split('');
 		//for first word and other non-exceptions
-		if (titleWords[0] || !exceptionWords.includes(titleWord)) {		
+		if (titleWord === titleWords[0] || !exceptionWords.includes(titleWord)) {				
 			//for every letter
-			for (let j = 0; j < letters.length; j++)
-
-			letter[0].toUpperCase();
-			finalLetterArray.push(letter[i]);
-			finalWord = finalLetterArray.join('');
-			finalTitleArray.push(finalWord);
+			for (let j = 0; j < letters.length; j++) {
+	
+				letters[0].toUpperCase();
+				finalLetterArray.push(letters[i]);
+				finalWord = finalLetterArray.join('');
+				finalTitleArray.push(finalWord);
+			}
 		}
 
 		//for the rest (which are all exception words)
 		finalTitleArray.push(titleWord);
 	}
-	finalTitle = finalTitleArray.join(' ');
+	finalTitle = finalTitleArray.join('');
 	return finalTitle;
 }
