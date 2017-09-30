@@ -1,3 +1,9 @@
+1.	VERY EASY
+	file: 8-ternary-operator.js
+	issue: shorten it even more to 137 characters
+	guess: already did ? and `${}` so I don't know
+	kata: https://www.codewars.com/kata/be-concise-i-the-ternary-operator/train/javascript
+
 2. 	EASY
 	file: 8-wilson-primes.js
 	issue: always returns true
