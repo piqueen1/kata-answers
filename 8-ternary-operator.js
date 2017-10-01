@@ -1,9 +1,3 @@
-function describeAge(n) {
-	return `You're a(n) ${ n <= 12 ? 'kid' 
-		: n >= 13 && n <= 17 ? 'teenager'
-		: n >= 18 && n <= 64 ? 'adult'
-		: 	'elderly'	
-		}`;
-}
+function describeAge(a){return`You're a(n) ${12>=a?'kid':13<=a&&17>=a?'teenager':18<=a&&64>=a?'adult':'elderly'}`}
 
 TASK: GET THIS DOWN TO 137 characters, currently 159
