@@ -1,34 +1,25 @@
-1.	VERY EASY
-	file: 8-ternary-operator.js
-	issue: shorten it even more to 137 characters
-	guess: already did ? and `${}` so I don't know
-	kata: https://www.codewars.com/kata/be-concise-i-the-ternary-operator/train/javascript
 
-2. 	EASY
+1. 	EASY
 	file: 8-wilson-primes.js
 	issue: always returns true
 	guess: something is screwy with the math?  looks right
 	kata: https://www.codewars.com/kata/wilson-primes/train/javascript
 
-3.  MAYBE EASY MAYBE NOT
+2.  MAYBE EASY MAYBE NOT
 	file: 8-js-basic-31.js
 	issue: misclassifies things as white or black
 	guess: no clue
 	kata: https://www.codewars.com/kata/training-js-number-31-methods-of-arrayobject-isarray-indexof-and-tostring/train/javascript
 	Notes: passed 55 / failed 48; can't find error pattern
 
-4.	MAYBE EASY MAYBE NOT
-	file: That one dadblasted page on codecademy:
-	https://www.codecademy.com/courses/learn-javascript-introduction/lessons/variables/exercises/string-interpolation-ii?action=lesson_resume&course_redirect=introduction-to-javascript
-
-5.	MEDIUM
+3.	MEDIUM
 	file: 6-title-case.js
 	issue 1: index 0 is doubled in final output
 	issue 2: nothing is getting capitalized
 	guess: line 43 maybe. the path turns the wrong way somewhere
 	kata: https://www.codewars.com/kata/5202ef17a402dd033c000009/train/javascript
 
-6. 	MEDIUM
+4. 	MEDIUM
 	file: 7-longest-vowel-chain.js
 	issue 1: command to see which element of an array is longest?
 	issue 2: is my logic even going the right direction?  What should I do next?
