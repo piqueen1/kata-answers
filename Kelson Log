@@ -26,4 +26,9 @@
 	guess: there's a totally better path to take here
 	kata: https://www.codewars.com/kata/title-case 
 
+5. 	EASY
+	file: 7-zero-balanced-array.js
+	issue: error saying ) in }); shouldn't be there
+	guess: no clue -- it ISN'T there, can't tell what they mean
+	kata: https://www.codewars.com/kata/zero-balanced-array/train/javascript 
 
