@@ -16,13 +16,14 @@ function amIWilson(p) {
   }
 
   const num = p - 1;
+  const numerator = factorial(num) + 1;
+  const denominator = p * p;
+  const result = numerator / denominator;
 
-    if (Number.isInteger(((factorial(num) + 1) / p * p))) {
+    if (Number.isInteger(result)) {
         return true;
-    } else {
-        return false;
     }
-
+    return false;
 }  
 
 //((P-1)! + 1) / (P * P)

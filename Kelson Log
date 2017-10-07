@@ -1,34 +1,40 @@
-
-1. 	EASY
-	file: 8-wilson-primes.js
-	issue: always returns true
-	guess: something is screwy with the math?  looks right
-	kata: https://www.codewars.com/kata/wilson-primes/train/javascript
-
-2.  MAYBE EASY MAYBE NOT
-	file: 8-js-basic-31.js
-	issue: misclassifies things as white or black
-	guess: no clue
-	kata: https://www.codewars.com/kata/training-js-number-31-methods-of-arrayobject-isarray-indexof-and-tostring/train/javascript
-	Notes: passed 55 / failed 48; can't find error pattern
-
-3.	MEDIUM
+1.	MEDIUM
 	file: 6-title-case.js
 	issue 1: index 0 is doubled in final output
 	issue 2: nothing is getting capitalized
 	guess: line 43 maybe. the path turns the wrong way somewhere
 	kata: https://www.codewars.com/kata/5202ef17a402dd033c000009/train/javascript
 
-4. 	MEDIUM
+2. 	MEDIUM
 	file: 7-longest-vowel-chain.js
 	issue 1: command to see which element of an array is longest?
 	issue 2: is my logic even going the right direction?  What should I do next?
 	guess: there's a totally better path to take here
 	kata: https://www.codewars.com/kata/title-case 
 
-5. 	EASY
+CURRENT: 	NOT AS EASY AS I EXPECTED
 	file: 7-zero-balanced-array.js
-	issue: error saying ) in }); shouldn't be there
-	guess: no clue -- it ISN'T there, can't tell what they mean
+	issue: failed 3 cases, all false when expected true.  I can't identify the pattern
+	guess: none
 	kata: https://www.codewars.com/kata/zero-balanced-array/train/javascript 
 
+4.	POSSIBLY EASY
+	file: 7-big-fibonacci.js
+	issue: stops calculating correctly when n gets really big
+	guess: possibly the e+ rounding, but one error doesn't use e+ (correct answers never do)
+	kata: https://www.codewars.com/kata/big-fibonacci-numbers-1/train/javascript
+
+5. 	EASY
+	file: 8-polish-alphabet.js
+	issue: isn't processing the array at all (map is returning input without changing it)
+	guess: I miswrote the map function or the if statement
+	kata: https://www.codewars.com/kata/polish-alphabet/train/javascript
+
+LESSONS
+1.	subject: classes generating objects
+	file: 8-basic-subclasses
+	kata: https://www.codewars.com/kata/basic-subclasses-adam-and-eve/train/javascript
+
+2. 	subject: pulling values off objects
+	file: 7-building-strings.js
+	kata: https://www.codewars.com/kata/building-strings-from-a-hash/train/javascript
