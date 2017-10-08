@@ -18,7 +18,7 @@ function correctPolishLetters (string) {
 
   //check each value and replace with key if necessary
   let englishArray = letterArray.map(function(letter) {
-  	if (letter in key) {
+  	if (key.hasOwnProperty(letter)) {
   		return key[letter]
   	} 
   	return letter;
