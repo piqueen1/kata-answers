@@ -8,12 +8,10 @@ function moveVowel(input) {
 	//declare final string
 	let finalString = '';
 
-	//iterate and push consonants
-	for (let i = 0; i < unsorted.length; i++) {
-		const letter = unsorted[i];
-
-		finalArray.push(letter);
-	}
+	//filter for only consonants
+	finalArray = unsorted.filter(function(letter) {
+		return !vowels.includes(letter);
+	})
 
 	//iterate and push vowels
 	for (let i = 0; i < unsorted.length; i++) {
