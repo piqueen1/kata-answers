@@ -6,9 +6,11 @@ function squareSum(numbers) {
 
   if (numbers.length === 0) { return 0 };
 
-  const reducer = (accumulator, currentValue) => accumulator + Math.pow(currentValue, 2);
+  let total = numbers.reduce(function (accumulator, currentValue) {
+    return accumulator + Math.pow(currentValue, 2);
+  }, 0);
 
-  return numbers.reduce(reducer);
+  return total;
 }
 
 squareSum([-12, -3, 13, 20, -14]);
