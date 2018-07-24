@@ -3,8 +3,8 @@
 console.log('****START****');
 
 function xor(a, b) {
-  // TODO: Program Me
+  return a === b ? false : true;
 }
 
-console.log('Answer: ', xor(tue, true));
+console.log('Answer: ', xor(true, true));
 console.log('****END****');
