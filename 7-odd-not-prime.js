@@ -1,28 +1,34 @@
-// https://www.codewars.com/kata/odd-not-prime/train/javascript
+  // https://www.codewars.com/kata/odd-not-prime/train/javascript
 
-console.log('****START****');
+  console.log('****START****');
 
-function oddNotPrime(number) {
-  let notPrimeCounter = 0;
+  function oddNotPrime(number) {
+    let oddNotPrimeCounter = 0;
 
-  from (let i = 1, i++, i = number) {
-    if (i = 1) {
-      notPrimeCounter++;
-    }
-    if (i % 2 === 1) {
-      notPrimeCounter++;
-    }
-    if (prime(number) {
-      notPrimeCounter--;
-    }
+    for (let i = 0; i <= number; i++) {
+      if (i === 1) {
+        oddNotPrimeCounter++;
+        console.log('counter: ', oddNotPrimeCounter);
+        continue;
+      };
+      if (i % 2 === 1) {
+        oddNotPrimeCounter++;
+      };
+      if (isPrime(i)) {
+        oddNotPrimeCounter--;
+      };
+    };
+
+    return oddNotPrimeCounter;
+  };
+
+  function isPrime(number) {
+    for (var i = 2; i < number; i++)
+      if (number % i === 0) return false;
+    return number !== 1;
   }
-}
 
-function prime(number) {
-  //figure out if number is prime, return boolean
-}
+  console.log('Answer: ', oddNotPrime(5)); // 2
+  console.log('****END****');
 
-oddNotPrime(99); // 26;
-
-console.log('Answer: ', oddNotPrime(99)); // 26
-console.log('****END****');
+//THIS IS WRONG; The answer is consistently one too small
