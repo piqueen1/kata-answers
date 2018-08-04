@@ -20,3 +20,31 @@ Consisting of: Vowels: ["A"] Consonants: ["B","H","D","S","W","J"]
 
 Good luck!! */
 
+
+console.log('****START****');
+
+function sortLetters(input) {
+  let vowelArray = [];
+  let consonantArray = [];
+  let finalArray = [];
+
+  for (let i = 0; i < input.length; i++) {
+    for (let j = 0; j < input[i].length; j++) {
+      let current = input[i][j];
+
+      if (/[aeiou]/gi.test(current)) {
+        current = current.toUpperCase();
+        vowelArray.push(current);
+      } else if (!/[0123456789]/.test(current)) {
+        current = current.toUpperCase();
+        consonantArray.push(current);
+      }
+    }
+  }
+  finalArray.push(vowelArray, consonantArray);
+
+  return finalArray;
+}
+
+console.log('Answer: ',sortLetters([["a"],[2, 3],["T", "i","Q"]])); // 26
+console.log('****END****');
