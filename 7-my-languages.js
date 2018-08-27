@@ -1,14 +1,18 @@
 // https://www.codewars.com/kata/mylanguages
 
+// MY ANSWER DOESN'T WORK.  ACTUAL ANSWER:
+// function myLanguages(results) {
+//   return Object.keys(results).filter(r => results[r] > 59).sort((a, b) => results[b] - results[a]);
+// }
+
 console.log('*** Start ***');
 
 function myLanguages(results) {
-  let languageKey = [];
-  for (let key in results) {
-    languageKey[results[key]] = key;
-  }
+  let resultsArray = Object.entries(results).reduce((filteredArray, current) => {
+    return filteredArray + current;
+  }, []);
 
-  return languageKey;
+  return resultsArray;
   // const qualifyingLanguages = Object.keys(results).filter(key => results[key] >= 60);
   // let orderedArray = [];
 
