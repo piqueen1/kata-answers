@@ -3,6 +3,7 @@
 console.log('***start***');
 
 function solve(str, k) {
+  
   return str;
 }
 console.log(solve('1234', 1))
