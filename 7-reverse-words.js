@@ -3,7 +3,17 @@
 console.log('***start***');
 
 function reverseWords(str) {
-  // Go for it
+  const wordArray = str.split(' ');
+  let reversedArray = [];
+
+  for (let i=0; i<wordArray.length; i++) {
+    let word = wordArray[i];
+    const reversedWord = word.split('').reverse().join('');
+
+    reversedArray.push(reversedWord);
+  }
+
+  return reversedArray.join(' ');
 }
-console.log(minValue([1, 3, 1])); // 13;
+console.log(reverseWords('The quick brown fox jumps over the lazy dog.'));
 console.log('*** end ***');
