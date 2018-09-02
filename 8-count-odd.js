@@ -4,15 +4,20 @@ console.log('***start***');
 
 function oddCount(n) {
   let count = 0;
-  i = 0;
+  let i = 0;
 
-  while (i < n) {
-    if (i % 2 === 1) {
-      count++;
+  do {
+    if (isOdd(i)) {
+      ++count;
     }
-    i++;
-  }
+    ++i;
+  } while (i < n);
+
   return count;
+}
+
+function isOdd(n) {
+  return n % 2 === 1 ? true : false;
 }
 
 console.log(oddCount(7));
