@@ -3,8 +3,12 @@
 console.log('***start***');
 
 function removeDuplicateWords(s) {
-  // your perfect code...
+  const array = s.split(' ');
+
+  const uniqueArray = array.filter((x, i, a) => a.indexOf(x) == i);
+
+  return uniqueArray.join(' ');
 }
 
-console.log(oddCount(7)); //3
+console.log(removeDuplicateWords('alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta')); // 'alpha beta gamma delta');
 console.log('*** end ***');
