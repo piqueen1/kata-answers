@@ -2,23 +2,13 @@
 
 console.log('***start***');
 
-function oddCount(n) {
-  let count = 0;
-  let i = 0;
+const oddCount = (n) => {
+  if (!n || n < 0) {
+    return 0;
+  }
 
-  do {
-    if (isOdd(i)) {
-      ++count;
-    }
-    ++i;
-  } while (i < n);
-
-  return count;
+  return Math.floor(n / 2);
 }
 
-function isOdd(n) {
-  return n % 2 === 1 ? true : false;
-}
-
-console.log(oddCount(7));
+console.log(oddCount(7)); //3
 console.log('*** end ***');
