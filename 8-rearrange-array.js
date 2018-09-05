@@ -1,7 +1,7 @@
 console.log('***start***');
 
 function fixTheMeerkat(arr) {
-  console.log(arr);
+  return arr.reverse();
 }
 
 console.log(fixTheMeerkat(["tail", "body", "head"])); // ["head", "body", "tail"]); // 'alpha beta gamma delta');
