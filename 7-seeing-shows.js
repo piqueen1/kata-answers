@@ -6,7 +6,7 @@ function chooseShows(showList) {
   let timeArray = [];
 
   for (let i=0; i<showList.length; i++) {
-    timeArray = timeArray.push(showList[i].time);
+    timeArray.push(showList[i].time);
   }
 
   let min = Math.min(timeArray);
