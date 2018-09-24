@@ -3,7 +3,7 @@
 console.log('***start***');
 
 function chooseShows(showList) {
-  return showList;
+  return showList[0].name;
 }
 
 console.log(chooseShows([
