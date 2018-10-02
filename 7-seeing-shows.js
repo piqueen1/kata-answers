@@ -8,11 +8,13 @@ function chooseShows(showList) {
   let totalCost = 0;
   let firstShow;
 
-  if (showList === []) {
-    nameList = 'No shows to see!';
+  // Empty Input Array response
+  if (showList && showList.length) {
+    nameList = ['No shows to see!'];
     return [nameList, 0];
   }
 
+  // Make 
   for (let i=0; i<showList.length; i++) {
     timeArray.push(showList[i].time);
   }
@@ -28,8 +30,8 @@ function chooseShows(showList) {
   }
 
   let earliestStart = firstShow.time + firstShow['length'] + .5;
-
   for (let i=0; i<showList.length; i++) {
+    console.log(showList[i].time);
     if (showList[i].time >= earliestStart) {
       nameList.push(showList[i].name);
       totalCost = totalCost + showList[i].price;
