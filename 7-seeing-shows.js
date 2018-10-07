@@ -9,7 +9,7 @@ function chooseShows(showList) {
   let firstShow;
 
   // Empty Input Array response
-  if (showList && showList.length) {
+  if (showList && showList.length === 0) {
     nameList = ['No shows to see!'];
     return [nameList, 0];
   }
@@ -62,3 +62,19 @@ console.log(chooseShows([
   }
 ])); // [['Courtney Act', 'Little Death Club'], 20]
 console.log('*** end ***');
+
+/* Successful code:
+function chooseShows(shows) {
+    var s, x, p = 0, r = [], f = s => s.time >= x;
+    shows.sort((a,b) => (a.time-b.time) || (a.price-b.price));
+    while (shows.length) {
+        s = shows[0];
+        x = s.time+s.length+0.5;
+        shows = shows.filter(f);
+        r.push(s.name);
+        p += s.price;
+    }
+    if (!r.length) r.push('No shows to see!');
+    return [r,p];
+}
+*/
