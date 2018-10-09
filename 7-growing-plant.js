@@ -6,7 +6,7 @@ function growingPlant(upSpeed, downSpeed, desiredHeight) {
   let height = 0;
   let days = 0;
 
-  if (desiredHeight < upSpeed) { return 1 };
+  if (desiredHeight < upSpeed - downSpeed) { return 1 };
 
   while(height < desiredHeight){
     height = height + upSpeed - downSpeed;
@@ -18,3 +18,5 @@ function growingPlant(upSpeed, downSpeed, desiredHeight) {
 
 console.log(growingPlant(100, 10, 910)); // 10
 console.log('*** end ***');
+
+//I never got it
