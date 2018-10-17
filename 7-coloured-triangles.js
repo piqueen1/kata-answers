@@ -6,18 +6,19 @@ function triangle(row) {
   const rowArray = row.split('');
   let nextRow = [];
 
-  for (let i=0; i<letterArray.length; i++) {
-    let current = letterArray[i];
-    if (!(i+1)) break;
-    if (current === letterArray[i+1]) {
-
+  for (let i=0; i<rowArray.length-1; i++) {
+    const current = rowArray[i];
+    const next = rowArray[i+1];
+    if (current === next) {
+      nextRow.push(current);
+    } else if (current === ) {
+//HOW DO I DO A LOOKUP ON 6 COMBINATIONS?
     }
-  
-
   }
+   return nextRow;
 }
 
 
 
-console.log(triangle('GB')); // 'R'
+console.log(triangle('GGG')); // 'R'
 console.log('*** end ***');
