@@ -1,6 +1,22 @@
 // https://www.codewars.com/kata/sort-one-three-two/train/javascript
 
-// PROBLEM: how to deal with the space between number and hundred?  Now puts 999 before 9
+//FAVORE SOLUTION, NOT MINE:
+const sortByName = arr => {
+  const words = {};
+  arr.forEach(n => words[n] = num2word(n));
+  return arr.sort((a, b) => words[a].localeCompare(words[b]));
+};
+
+function num2word(n) {
+  var a = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+  var b = ["twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+  if (n >= 0 && n < 20) return a[n];
+  if (n >= 20 && n < 100) return b[Math.floor(n / 10) - 2] + (n % 10 ? '-' + a[n % 10] : '');
+  if (n >= 100 && n < 1000) return a[Math.floor(n / 100)] + ' hundred' + (n % 100 ? ' ' + num2word(n % 100) : '');
+  return num2word(Math.floor(n / 1000)) + ' thousand' + (n % 1000 ? ' ' + num2word(n % 1000) : '');
+}
+
+// PROBLEM WITH MINE: how to deal with the space between number and hundred?  Now puts 999 before 9
 
 console.log('***start***');
 
@@ -8,6 +24,7 @@ function sortByName(ary) {
   let keyValuePairs = [];
   const wordArray = ary.map(x => numToWords(x));
 
+  //make an array of word / digit pairs
   for (let i=0; i<wordArray.length; i++) {
     const current = wordArray[i];
 
@@ -16,9 +33,11 @@ function sortByName(ary) {
     keyValuePairs.push(onePair);
   }
 
+  //sort word / digit pairs by word
   const sortedArray = keyValuePairs.sort();
   let finalArray = [];
 
+  //create array of just digits after they've been sorted by words
   for (let j=0; j<keyValuePairs.length; j++) {
     finalArray.push(keyValuePairs[j][1]);
   }
@@ -113,5 +132,5 @@ function numToWords(number) {
   // return strings.sort();
 }
 
-console.log(sortByName([1,2,3,4])); // [4, 1, 3, 2]
+console.log(sortByName([9, 99, 999])); // [9, 999, 99]
 console.log('*** end ***');
