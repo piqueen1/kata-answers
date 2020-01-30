@@ -1,7 +1,8 @@
-0.	 EASY
+0.	EASY
 	file: ES6-classes-people.js
 	issue: what's a class method?
 	kata: https://www.codewars.com/kata/fun-with-es6-classes-number-1-people-people-people/train/javascript
+	*DONE*
 
 1.	MEDIUM
 	file: 6-title-case.js
