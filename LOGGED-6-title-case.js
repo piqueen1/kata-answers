@@ -8,7 +8,7 @@ function titleCase(title, minorWords = undefined) {
 
   console.log(minorArray)
 
-  const casedTitle = lowerTitleWords.map( function(word) {
+  const casedTitleArray = lowerTitleWords.map( function(word) {
 		if (minorArray && minorArray.includes(word)) {
 			return word;
 		} else {
