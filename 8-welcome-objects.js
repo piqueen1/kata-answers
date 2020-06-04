@@ -21,10 +21,12 @@ function greet(language) {
     welsh: 'Croeso'
   }
   if (language && key[language]){
-    return key.[language]
+    return key[language]
   } else {
     return 'Welcome'
   }
+
+  //  return language in welcomes ? welcomes[language] : welcomes.english;
 }
 
-console.log(greet(irish))
+console.log(greet('irish')) // 'Welcome'
