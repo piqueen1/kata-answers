@@ -9,13 +9,12 @@
 // 6. join array back to string
 
 function sort(sentence){
-  const noPunct = sentence.replace(/[0-9]/g, '');
-  const words = noPunct.split(' ');
-  const lowercase = words.filter( word => word[0] === word[0].toLowerCase() );
-  const lowerSorted = lowercase.sort((a, b) => b.localeCompare(a));
-  const uppercase = words.filter( word => word[0] === word[0].toUpperCase() );
-  const upperSorted = uppercase.sort((a, b) => a.localeCompare(b));
-  console.log(uppercase)
+  const noPunctRegex = /[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g;
+  const words = sentence.replace(noPunctRegex, '').split(' ');
+  const lowerSorted = words.filter( word => word[0] === word[0].toLowerCase() ).sort((a, b) => a.localeCompare(b));
+  const upperSorted = words.filter( word => word[0] === word[0].toUpperCase() ).sort((a, b) => b.localeCompare(a));
+  const finalArray = lowerSorted.concat(upperSorted)
+  return finalArray.join(' ')
 }
 
 console.log(sort("I, habitan of the Alleghanies, treating of him as he is in himself in his own rights")) // "as habitan he him himself his in in is of of own rights the treating I Alleghanies"
