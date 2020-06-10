@@ -1,10 +1,20 @@
 //https://www.codewars.com/kata/5287e858c6b5a9678200083c/train/javascript
 
 function narcissistic(value) {
-  const digits = value.toString().length;
-  const dig1 = parseInt(value.toString().split('')[0]);
+  const numberString = value.toString();
+  const exponent = numberString.length;
+  let sum = 0;
 
-  return dig1;
-}
+  for (let i=0;i<exponent;i++) {
+    const currentDigit = parseInt(numberString.split('')[i]);
+    const raised = currentDigit**exponent;
+
+    sum += raised;
+  };
+
+  return sum === value;
+};
 
 console.log(narcissistic( 371 )); // true
+
+//
