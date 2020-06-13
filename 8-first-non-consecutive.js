@@ -4,16 +4,18 @@ function firstNonConsecutive (arr) {
   let counter = 0;
   
   for (let i=0;i<arr.length;i++) {
-    if ( arr[i] !== (arr[i-1] + 1)) {
-      counter = arr[i];
-    } else if (!arr[i+1]) {
+    console.log('array: ', arr);
+    
+    if (!arr[i+1]) {
       counter = null;
+      break;
+    } else if ( arr[i-1] && (arr[i] !== (arr[i-1] + 1))) {
+      counter = arr[i];
+      break;
     } else {
       continue;
-    }
-    
-    return counter;
-  };
+    };
+  }
   
   return counter;
 }
