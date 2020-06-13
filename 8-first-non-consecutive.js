@@ -2,10 +2,9 @@
 
 function firstNonConsecutive (arr) {
   let counter = 0;
-  
+  console.log('array: ', arr);
+
   for (let i=0;i<arr.length;i++) {
-    console.log('array: ', arr);
-    
     if (!arr[i+1]) {
       counter = null;
       break;
@@ -16,7 +15,7 @@ function firstNonConsecutive (arr) {
       continue;
     };
   }
-  
+
   return counter;
 }
 
