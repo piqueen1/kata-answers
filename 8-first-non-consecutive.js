@@ -5,7 +5,7 @@ function firstNonConsecutive (arr) {
   console.log('array: ', arr);
 
   for (let i=0;i<arr.length;i++) {
-    if (!arr[i+1]) {
+    if (i === arr.length-1) {
       counter = null;
       break;
     } else if ( arr[i-1] && (arr[i] !== (arr[i-1] + 1))) {
