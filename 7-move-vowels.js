@@ -1,6 +1,8 @@
+// https://www.codewars.com/kata/56bf3287b5106eb10f000899/train/javascript
+
 function moveVowel(input) {
 	//string to array
-	const unsorted = input.split();
+	const unsorted = input.split('');
 	//declare vowel regex
 	const vowels = 'aeiouAEIOU';
 	//declare final array
@@ -26,4 +28,4 @@ function moveVowel(input) {
 	return finalString;
 }
 
-ARG IT DOESN'T CHANGE THE ARRAY AT ALL
+console.log(moveVowel("day")) //,"dya")
