@@ -1,14 +1,15 @@
+//https://www.codewars.com/kata/53573877d5493b4d6e00050c/train/javascript
+
 function capital(capitals){
   let phraseArray = [];
-  let properties = Object.getOwnPropertyNames(capitals);
-  //NEXT: reference each value, not each key
-  
+
   for (let i=0;i<capitals.length;i++) {
-    const capitol = capitals[i].capital;
-    phraseArray.push(`The capitol of this entity is ${capitol}`);
+    const name = Object.values(capitals[i])[0];
+    const capitol = Object.values(capitals[i])[1];
+    phraseArray.push(`The capital of ${name} is ${capitol}`);
   };
-  
-  return properties;
+
+  return phraseArray;
 }
 
-console.log(capital( [{state: 'Maine', capital: 'Augusta'}][0])) //, "The capital of Maine is Augusta")
+console.log(capital( [{state: 'Maine', capital: 'Augusta'}][0])) //, "The capital of Mai
