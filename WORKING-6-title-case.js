@@ -3,15 +3,15 @@
 function titleCase(title, minorWords = undefined) {
 	const lowerTitleWords = title.toLowerCase().split(' ');
   
-  const casedTitle = lowerTitleWords.map( function(word, minorWords = undefined) {
-		if (minorWords && minorWords.includes(word)) {
+  const casedTitle = lowerTitleWords.map( function(word, minorWords) {
+		if ((typeof minorWords == "array") && (minorWords.indexOf(word) > -1)) {
 			return word;
 		} else {
-			return word[0].toUpperCase()
+			return word.charAt(0).toUpperCase() + word.slice(1)
 		}
   } );
-  console.log(casedTitle)
-  return casedTitle
+
+  return casedTitle.join(' ');
 }
 
 console.log(titleCase("james and the giant peach"))
