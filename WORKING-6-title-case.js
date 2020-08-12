@@ -2,7 +2,8 @@
 
 function titleCase(title, minorWords = undefined) {
 	const lowerTitleWords = title.toLowerCase().split(' ');
-  
+	console.log("minorWords:", minorWords)
+	console.log("lowerTitleWords", minorWords)
   const casedTitle = lowerTitleWords.map( function(word, minorWords) {
 		if ((typeof minorWords == "array") && (minorWords.indexOf(word) > -1)) {
 			return word;
