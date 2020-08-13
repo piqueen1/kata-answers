@@ -38,10 +38,6 @@ CURRENT: 	NOT AS EASY AS I EXPECTED
 	kata: https://www.codewars.com/kata/polish-alphabet/train/javascript
 
 LESSONS
-1.	subject: classes generating objects
-	file: 8-basic-subclasses
-	kata: https://www.codewars.com/kata/basic-subclasses-adam-and-eve/train/javascript
-
-2. 	subject: pulling values off objects
+1. 	subject: pulling values off objects
 	file: 7-building-strings.js
 	kata: https://www.codewars.com/kata/building-strings-from-a-hash/train/javascript
