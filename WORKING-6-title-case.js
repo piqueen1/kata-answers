@@ -1,18 +1,23 @@
 // URL: https://www.codewars.com/kata/5202ef17a402dd033c000009/train/javascript
 
 function titleCase(title, minorWords = undefined) {
-	const lowerTitleWords = title.toLowerCase().split(' ');
-	console.log("minorWords:", minorWords)
-	console.log("lowerTitleWords", minorWords)
-  const casedTitle = lowerTitleWords.map( function(word, minorWords) {
-		if ((typeof minorWords == "array") && (minorWords.indexOf(word) > -1)) {
-			return word;
-		} else {
-			return word.charAt(0).toUpperCase() + word.slice(1)
-		}
-  } );
+  const lowerTitleWords = title.toLowerCase().split(' ');
+	const casedTitleArray = [];
 
-  return casedTitle.join(' ');
+	for (let i=0;i<lowerTitleWords.length;i++) {
+		const lilCurrent = lowerTitleWords[i];
+		const bigCurrent = lilCurrent.charAt(0).toUpperCase() + lilCurrent.slice(1)
+
+  	if (minorWords === undefined | i === 0 ) {
+  		casedTitleArray.push(bigCurrent);
+  	} else if (minorWords.toLowerCase().split(' ').includes(lilCurrent)){
+			casedTitleArray.push(lilCurrent);
+		} else {
+			casedTitleArray.push(bigCurrent);
+		}
+	}
+
+  return casedTitleArray.join(' ');
 }
 
-console.log(titleCase("james and the giant peach"))
+console.log(titleCase('a clash of KINGS', 'a an the of')) // 'A Clash of Kings'
