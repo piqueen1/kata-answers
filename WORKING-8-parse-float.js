@@ -13,3 +13,5 @@ function parseF(s) {
 }
 
 console.log(parseF("1")) //, 1.0);)
+
+// problem: passes all except one
