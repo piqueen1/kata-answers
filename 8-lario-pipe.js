@@ -1,14 +1,18 @@
 // https://www.codewars.com/kata/56b29582461215098d00000f/train/javascript
 
 function pipeFix(numbers){
+  const min = numbers.reduce(function(a, b) {
+    return Math.min(a, b);
+  });
+  
   const max = numbers.reduce(function(a, b) {
     return Math.max(a, b);
   });
   
   let array =[]
   
-  while(array.length<max) {
-    array.push(array.length+1)
+  for (let i=min; i<=max; i++) {
+    array.push(i)
   }
 
   return array
