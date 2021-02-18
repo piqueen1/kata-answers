@@ -19,9 +19,15 @@ function calculateWinners(snapshot, penguins) {
     let penguin = {}
     penguin.name = penguins[i]
     penguin.lane = lanes[i]
-    penguin.place = penguin.lane.indexOf('p')
+    penguin.laneArray = lanes[i].split('')
+    penguin.place = penguin.lane.search(/[pP]/)
     penguin.remaining = laneLength - penguin.place
-    //penguin.waves = penguin.lane.indexOfAll('~')
+
+    penguin.waves = penguin.laneArray.reduce(function(a, e, i) {
+      if (e === '~')
+          a.push(i);
+      return a;
+    }, []);
 
     for (let i=0;i<penguin.waves.length;i++) {
       if (penguin.waves[i] > penguin.place) {
@@ -31,9 +37,12 @@ function calculateWinners(snapshot, penguins) {
 
     penguinObjects.push(penguin)
   }
-  //sort penguinObjects by penguinObjects[0].remaining, descending
+  
+  const sortedPenguins = penguinObjects.sort((a,b) => {
+    return (a.remaining > b.remaining) ? 1 : -1
+  })
 
-  return `GOLD: ${penguinObjects[0].name}, SILVER: ${penguinObjects[1].name}, BRONZE: ${penguinObjects[2].name}`
+  return `GOLD: ${sortedPenguins[0].name}, SILVER: ${sortedPenguins[1].name}, BRONZE: ${sortedPenguins[2].name}`
 };
 
 const snapshot = `|----p---~---------|
